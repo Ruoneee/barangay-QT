@@ -9,10 +9,12 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    login.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    login.h \
     mainwindow.h
 
 FORMS += \
@@ -23,3 +25,9 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    assets/assets.qrc
+
+DISTFILES += \
+    assets/UserInterface/login page.png
